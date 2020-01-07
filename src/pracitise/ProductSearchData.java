@@ -2,11 +2,20 @@ package pracitise;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class ProductSearchData {
 	private String[][] proTable;
 	String proInfo = null;
 	
-	public ProductSearchData(int num, Scanner sc) {
+	public ProductSearchData() {
+		proTable = new String[][] {{"세탁기" , "드럼 세탁기 최신형"},
+									{"냉장고" , "지펠 냉장고 최신형"},
+									{"TV" , "HDTV 150인치 최신형"}};
+	}
+
+	
+	public ProductSearchData(int num, Scanner sc, JOptionPane j) {
 		setProTable(num);
 		for(int i = 0; i < proTable.length; i++) {
 			for(int n = 0; n < proTable[i].length; n++) {
@@ -35,6 +44,7 @@ public class ProductSearchData {
 			}
 		}
 		return proInfo;
+		
 	}
 }
 	
